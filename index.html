@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despedida de Solteiro do Samuel (A Última Rodada de Truco)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Despedida de Solteiro do Samuel</h1>
+            <button id="modalButton">Conhecer Jogadores<br><span style="font-weight: 400; font-size: 11px;">(Clique em mim!)</span></button>
+        </header>
+        <form id="bachelorPartyForm">
+            <div class="form-step active" id="step1">
+                <label for="playerName">Qual o seu nome ladão?</label>
+                <input type="text" id="playerName" name="playerName" required>
+                <button type="button" onclick="nextStep(1)">Próximo (sem blefe)</button>
+            </div>
+
+            <div class="form-step" id="step2">
+                <label>Seu Nível como Jogador de Truco (seja sincero, a gente já te conhece):</label>
+                <select id="trucoLevel" name="trucoLevel" required>
+                    <option value="">Escolha seu nível (ou sua desculpa)</option>
+                    <option value="Iniciante">Iniciante (Só sei que nada sei, nem as regras)</option>
+                    <option value="Intermediário">Intermediário (Blefo, mas não acerto uma!)</option>
+                    <option value="Avançado">Avançado (Nasci com um baralho na mão e um 3 na manga)</option>
+                </select>
+                <div class="button-container">
+                    <button type="button" onclick="prevStep(2)">Anterior</button>
+                    <button type="button" onclick="nextStep(2)">Próximo</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step3">
+                <label>Contribuição para o Churrasco (escolha sua desculpa):</label>
+                <select id="churrascoContribution" name="churrascoContribution" required>
+                    <option value="">Selecione sua contribuição (ou falta dela)</option>
+                    <option value="Boi (tô rico, família!)">Boi (tô rico, família!)</option>
+                    <option value="Porco - vou levar um refri (tô quebrado, mas não tanto)">Porco - vou levar um refri (tô quebrado, mas não tanto)</option>
+                    <option value="Frango - vou levar um refri (tô mais liso que joelho de pedreiro)">Frango - vou levar um refri (tô mais liso que joelho de pedreiro)</option>
+                </select>
+                <div class="button-container">
+                    <button type="button" onclick="prevStep(3)">Anterior </button>
+                    <button type="button" onclick="nextStep(3)">Próximo </button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step4">
+                <label>Parceiro Ideal (aquele que não vai te deixar na mão):</label>
+                <select id="idealPartner" name="idealPartner" required>
+                    <option value="">Escolha seu parceiro dos sonhos</option>
+                    <option value="Bill (Faça o Básico!)">Bill (Faço o Básico!)</option>
+                    <option value="Samuel (o próprio noivo, oh coitado!)">Samuel (o próprio noivo, oh coitado!)</option>
+                    <option value="Daniel (o rei do blefe!!!)">Daniel (o rei do blefe!!!)</option>
+                    <option value="David (o cara que sempre tem um 3 no final)">David (o cara que sempre tem um 3 no final)</option>
+                    <option value="Maurício (Respeita o meu trofeu!)">Maurício (Respeita o meu trofeu!)</option>
+                    <option value="Robson (Só sabe roubar)">Robson (Só sabe roubar)</option>
+                    <option value="Caio (Não cheiro e nem fedo!)">Caio (Não cheiro e nem fedo!)</option>
+                    <option value="Bonzin (Experiente!)">Bonzin (Experiente!)</option>
+                    <option value="Maurílio (Só sei jogar com o robinho!)">Maurílio (Só sei jogar com o robinho!)</option>
+                    <option value="Luan (Tó aprendendo!)">Luan (Tó aprendendo!)</option>
+                    <option value="Cristiano (Só sei, que nada sei!)">Cristiano (Só sei, que nada sei!)</option>
+                </select>
+                <div class="button-container">
+                    <button type="button" onclick="prevStep(4)">Anterior</button>
+                    <button type="button" onclick="nextStep(4)">Próximo</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step5">
+                <label>Parceiro a Evitar (aquele que sempre entrega o jogo):</label>
+                <select id="avoidPartner" name="avoidPartner" required>
+                    <option value="">Selecione o azarão da rodada</option>
+                    <option value="Bill (estratégia? Que estratégia?)">Bill (estratégia? Que estratégia?)</option>
+                    <option value="Samuel (Só vou jogar se Ana deixar!)">Samuel (Só vou jogar se Ana deixar!)</option>
+                    <option value="Daniel (Só mais uma partida amor!!)">Daniel (Só mais uma partida amor!!)</option>
+                    <option value="David (vai guarda o copão pro casamento)">David (vai guarda o copão pro casamento)</option>
+                    <option value="Maurício (Só truco com carta boa.)">Maurício (Só truco com carta boa.)</option>
+                    <option value="Robson (blefa até quando não precisa)">Robson (blefa até quando não precisa)</option>
+                    <option value="Caio (Não sei dar sinal!)">Caio (Não sei dar sinal!)</option>
+                    <option value="Bonzin (só o nome é bom)">Bonzin (só o nome é bom)</option>
+                    <option value="Maurílio (tão silencioso que esquece de jogar)">Maurílio (tão silencioso que esquece de jogar)</option>
+                    <option value="Luan (Nunca tem nada)">Luan (Nunca tem nada)</option>
+                    <option value="Cristiano (só joga bem futebol mesmo)">Cristiano (só joga bem futebol mesmo)</option>
+                </select>
+                <div class="button-container">
+                    <button type="button" onclick="prevStep(5)">Anterior</button>
+                    <button type="button" onclick="nextStep(5)">Próximo</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step6">
+                <label>Selecione seu Time Ideal (você + 2 jogadores, escolha com sabedoria):</label>
+                <div class="checkbox-group" id="idealTeam">
+                    <label><input type="checkbox" name="idealTeam" value="Bill"> Bill</label>
+                    <label><input type="checkbox" name="idealTeam" value="Samuel"> Samuel</label>
+                    <label><input type="checkbox" name="idealTeam" value="Daniel"> Daniel</label>
+                    <label><input type="checkbox" name="idealTeam" value="David"> David</label>
+                    <label><input type="checkbox" name="idealTeam" value="Maurício"> Maurício</label>
+                    <label><input type="checkbox" name="idealTeam" value="Robson"> Robson</label>
+                    <label><input type="checkbox" name="idealTeam" value="Caio"> Caio</label>
+                    <label><input type="checkbox" name="idealTeam" value="Bonzin"> Bonzin</label>
+                    <label><input type="checkbox" name="idealTeam" value="Maurílio"> Maurílio</label>
+                    <label><input type="checkbox" name="idealTeam" value="Luan"> Luan</label>
+                    <label><input type="checkbox" name="idealTeam" value="Cristiano"> Cristiano</label>
+                </div>
+                <div class="button-container">
+                    <button type="button" onclick="prevStep(6)">Anterior</button>
+                    <button type="button" onclick="submitForm()">Finalizar</button>
+                </div>
+            </div>
+        </form>
+        <div id="summaryContainer" style="display: none;">
+            <h2>Resumo das Suas Escolhas:</h2>
+            <div id="summary"></div>
+            <button onclick="shareWhatsApp()">Compartilhar no WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="img/samuel.jpg" alt="Samuel">
+                    <h3>Samuel</h3>
+                    <p>O noivo camisolhão. Está tão nervoso com o casamento que pode confundir o três com o copag.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/daniel.jpg" alt="Daniel">
+                    <h3>Daniel</h3>
+                    <p>O melhor jogador da familia, segundo a esposa, é feroz em tudo que faz!</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/david.jpg" alt="David">
+                    <h3>David</h3>
+                    <p>O nosso truqueiro emocionado! Se pedir para fazer a primeira e guarda a carta no peito, pode saber.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/robin.jpg" alt="Robinho">
+                    <h3>Robinho</h3>
+                    <p>Rouba mais que político em ano de eleição. Se o time tá nos oito, já sabe: é hora de ir saindo da mesa.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/bill.jpg" alt="Bill">
+                    <h3>Bill</h3>
+                    <p>O mestre da corrida! Não aceita truco nem com letrado na mão. Truco pra ele é palavrão.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/mauricio.jpg" alt="mauricio">
+                    <h3>Maurício</h3>
+                    <p>O truqueiro que só truca com carta. Se gritou "SEIS!", é melhor correr.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/pai.jpg" alt="Bomzim">
+                    <h3>Bomzim</h3>
+                    <p>O rei da avacalhação! Só Truca na hora errada e ainda ri.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/criss.jpg" alt="Cristiano">
+                    <h3>Cristiano</h3>
+                    <p>Conhecido por jogar muito, ...muita bola.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/luan.jpg" alt="Luan">
+                    <h3>Luan</h3>
+                    <p>O mestre do 'nada'. pedir ajuda é em vão, é melhor jogar com o matheus.</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/" alt="Caio">
+                    <h3>Caio</h3>
+                    <p>O famoso perdemos de casal! É o terror da própria dupla</p>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/" alt="Maurilio">
+                    <h3>Maurilio</h3>
+                    <p>O papa-quieto! Tem mais conversa que carta. Se o truco fosse de prosa, seria campeão mundial.</p>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button onclick="changeSlide(-1)">Anterior</button>
+                <button onclick="changeSlide(1)">Próximo</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
